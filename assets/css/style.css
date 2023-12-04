@@ -1,0 +1,385 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(203, 100%, 9%);
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    overflow: hidden;
+    background-image: linear-gradient(to bottom, #1c8aa1, #62a5b9, #94c0d0, #c2dce7, #eff9fe);
+    display: flex;
+    flex-direction: column;
+}
+
+.menu {
+    display: flex;
+    background-color: hsl(351, 94%, 60%);
+}
+
+.mainbox {
+    position: relative;
+    background-image: url(../img/background.png);
+    background-size: cover;
+
+}
+
+.persona>img {
+    filter: contrast(105%) saturate(105%);
+}
+
+.dni {
+    position: relative;
+    border-radius: 25px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+.vermell {
+    background-color: hsl(351, 94%, 60%);
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 25px;
+    text-transform: uppercase;
+}
+
+
+
+
+
+.fotodni {
+    aspect-ratio: 1/1;
+    transform: scaleX(-1);
+    border-radius: 25px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.dades,
+.info {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-evenly;
+    gap: 5px;
+}
+
+.fila {
+    width: 100%;
+    height: fit-content;
+    display: grid;
+}
+
+.fila>p {
+    margin: 0;
+    width: fit-content;
+    height: fit-content;
+}
+
+.fila-dos {
+    grid-template-columns: 1fr 3.5fr;
+}
+
+.fila-quatre {
+    grid-template-columns: repeat(4, 1fr);
+
+}
+
+.camp {
+    margin: 0;
+    border-radius: 25px;
+    background-color: hsl(209, 90%, 92%);
+}
+
+.valor {
+    margin: 0;
+    border-radius: 25px;
+    background-color: hsl(209, 90%, 95%);
+
+}
+
+/* Mobile Styles */
+@media (max-width: 767px) {
+    .persona {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .persona>img {
+        max-width: 500px;
+        width: 100%;
+        /* Adjust the width as needed for smaller screens */
+        position: relative;
+    }
+
+    .container {
+        width: 90%;
+    }
+
+    .menu {
+        height: 70px;
+    }
+
+    .mainbox {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
+    .persona>img {
+        position: relative;
+        width: 100%;
+    }
+
+    .dni {
+        margin: 10px;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+        font-size: 12px;
+    }
+
+    .identificador {
+        margin: 15px 15px;
+        width: 95%;
+    }
+
+    .contenidor-dades {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .fotodni {
+        width: 70%;
+        margin-bottom: 15px;
+    }
+
+    .fila {
+        margin: 5px 20px;
+    }
+
+    .fila>p {
+        padding: 5px 25px;
+    }
+
+    .titulacio {
+        margin-top: 10px;
+        width: 100%;
+        height: 40px;
+    }
+
+    .insignies {
+        margin-top: 15px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .insignies>img {
+        width: 20%;
+    }
+
+    .firma {
+        position: absolute;
+        width: 20%;
+        bottom: -30px;
+        right: 0px;
+    }
+}
+
+/* Tablet Styles */
+@media (min-width: 768px) and (max-width: 1023px) {
+
+    /* Add tablet-specific styles here */
+    .persona {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .persona>img {
+        max-width: 500px;
+    }
+
+}
+
+
+/* Desktop Styles */
+@media (min-width: 1024px) {
+    body {
+        height: 100vh;
+    }
+
+    .container {
+        border-radius: 25px;
+        height: 90%;
+        width: 90%;
+    }
+
+    .menu {
+        height: 70px;
+    }
+
+    .mainbox {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        height: 100%;
+    }
+
+    .persona>img {
+        position: absolute;
+        width: 500px;
+        bottom: -15px;
+        left: -20px;
+    }
+
+    .dni {
+        margin: 20px;
+        height: 100%;
+        width: 80%;
+        padding: 25px;
+    }
+
+    .identificador {
+        justify-self: right;
+        margin-left: auto;
+        width: 250px;
+    }
+
+    .contenidor-dades {
+        position: relative;
+        display: grid;
+        grid-template-columns: 0.5fr 1fr;
+        gap: 15px;
+    }
+
+    .fotodni {
+        width: 250px;
+    }
+
+    .fila>p {
+        padding: 5px 25px;
+    }
+
+    .titulacio {
+        margin-top: 20px;
+        width: 100%;
+        height: 50px;
+    }
+
+    .insignies {
+        margin-top: 15px;
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        justify-items: center;
+    }
+
+    .insignies>img {
+        width: 80%;
+    }
+
+    .firma {
+        position: absolute;
+        width: 20%;
+        bottom: -30px;
+        right: 0px;
+    }
+}
+
+/* 4k Styles */
+@media (min-width: 2560px) {
+    body {
+        height: 100vh;
+    }
+
+    .container {
+        height: 90%;
+        width: 90%;
+    }
+
+    .menu {
+        height: 140px;
+    }
+
+    .mainbox {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        height: 100%;
+    }
+
+    .persona>img {
+        position: absolute;
+        width: 1000px;
+        bottom: -35px;
+        left: -125px;
+    }
+
+    .dni {
+        margin: 60px;
+        height: 100%;
+        width: 80%;
+        padding: 50px;
+    }
+
+    .identificador {
+        justify-self: right;
+        margin-left: auto;
+        width: 500px;
+    }
+
+    .contenidor-dades {
+        position: relative;
+        display: grid;
+        grid-template-columns: 0.5fr 1fr;
+        gap: 30px;
+    }
+
+    .fotodni {
+        width: 500px;
+    }
+
+    .fila>p {
+        padding: 5px 25px;
+    }
+
+    .titulacio {
+        margin-top: 40px;
+        width: 100%;
+        height: 100px;
+    }
+
+    .insignies {
+        margin-top: 30px;
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        justify-items: center;
+    }
+
+    .insignies>img {
+        width: 90%;
+    }
+
+    .firma {
+        position: absolute;
+        width: 25%;
+        bottom: -40px;
+        right: 0px;
+    }
+}
