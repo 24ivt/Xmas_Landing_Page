@@ -1,6 +1,9 @@
 const campoNombre = document.querySelector('.nom .valor');
 const campoNacimiento = document.querySelector('.naixement .valor');
+const campoSexo = document.querySelector('.sexe');
+const campoNacionalidad = document.querySelector('.nacionalitat');
 const campoDni = document.querySelector('.identificador p');
+
 // Parametros GET.
 const urlParams = new URLSearchParams(window.location.search);
 
@@ -15,7 +18,7 @@ if (urlParams.get('nom') != null) {
 // Nacimiento.
 let nacimiento = urlParams.get('naixement');
 if (nacimiento != null) {
-    // Comprovación del formato de la fecha.
+    // Comprobación del formato de la fecha.
     if (REGEX_NACIMIENTO.test(nacimiento)) {
         campoNacimiento.innerHTML = nacimiento;
     } else {
@@ -26,5 +29,32 @@ if (nacimiento != null) {
 // DNI.
 let dni = urlParams.get('dni');
 if (dni != null) {
-    campoDni.innerHTML = dni;
+    // Comprobación del formato del DNI.
+    if (/^\d{8}[a-zA-Z]$/.test(dni)) {
+        campoDni.innerHTML = dni;
+    } else {
+        console.error('El DNI no es vàlid.');
+    }
+}
+
+// Sexo.
+let sexo = urlParams.get('sexe');
+if (sexo != null) {
+    // Comprobación del valor para el campo del sexo válido.
+    if (/^[MF]$/.test(sexo)) {
+        campoSexo.innerHTML = sexo;
+    } else {
+        console.error('El sexe no es vàlid.');
+    }
+}
+
+// Nacionalidad.
+let nacionalidad = urlParams.get('nacionalitat');
+if (nacionalidad != null) {
+    // Comprobación del valor para el campo de la nacionalidad válida.
+    if (nacionalidad.length == 3) {
+        campoNacionalidad.innerHTML = nacionalidad;
+    } else {
+        console.error('La nacionalitat ha de tenir tres lletres.');
+    }
 }
