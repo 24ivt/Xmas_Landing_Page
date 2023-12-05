@@ -47,6 +47,10 @@ body {
     flex-direction: column;
 }
 
+.identificador {
+    text-transform: uppercase;
+}
+
 .vermell {
     background-color: hsl(351, 94%, 60%);
     color: white;
@@ -107,6 +111,10 @@ body {
     border-radius: 25px;
     background-color: hsl(209, 90%, 95%);
 
+}
+
+.nacionalitat {
+    text-transform: uppercase;
 }
 
 /* Mobile Styles */
