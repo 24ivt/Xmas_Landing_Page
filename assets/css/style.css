@@ -206,9 +206,71 @@ body {
 }
 
 /* Tablet Styles */
-/* @media (min-width: 768px) and (max-width: 1023px) {
+@media (min-width: 768px) and (max-width: 1023px) {
 
-} */
+    .contenidor-dades {
+        position: relative;
+        display: grid;
+        grid-template-columns: 0.5fr 1fr;
+        gap: 15px;
+    }
+    
+    .persona>img {
+        margin-top: 25px;
+        max-width: 500px;
+        width: 80%;
+        position: relative;
+    }
+
+    .dni {
+        margin: 50px;
+    }
+
+    
+    .contenidor-dades {
+        position: relative;
+        display: grid;
+        grid-template-columns: 0.5fr 1fr;
+        gap: 15px;
+        padding: 0px 25px;
+    }
+
+    .fotodni {
+        width: 250px;
+    }
+
+    .fila>p {
+        padding: 5px 25px;
+    }
+
+    .insignies {
+        margin-top: 15px;
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        justify-items: center;
+    }
+
+    .insignies>img {
+        width: 80%;
+    }
+
+    .firma {
+        position: absolute;
+        width: 20%;
+        bottom: -45px;
+        right: 0px;
+    }
+
+    .vermell {
+        font-size: 15px;
+    }
+    .dades {
+        font-size: 12px;   
+    }
+    .fila-dos, .fila-quatre {
+        grid-template-columns: repeat(2,1fr);
+    }
+}
 
 
 /* Desktop Styles */
