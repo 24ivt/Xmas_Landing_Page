@@ -106,14 +106,16 @@ body {
 }
 
 /* Mobile and tablet Styles */
-@media (max-width: 1023px) {
+@media (max-width: 1400px) {
     .persona {
         display: flex;
         justify-content: center;
         align-items: center;
     }
 
+
     .persona>img {
+        margin-top: 25px;
         max-width: 500px;
         width: 80%;
         position: relative;
@@ -134,7 +136,7 @@ body {
     }
 
     .dni {
-        margin: 10px;
+        margin: 25px;
         padding: 10px;
         display: flex;
         flex-direction: column;
@@ -206,20 +208,13 @@ body {
 }
 
 /* Tablet Styles */
-@media (min-width: 768px) and (max-width: 1023px) {
+@media (min-width: 768px) and (max-width: 1400px) {
 
     .contenidor-dades {
         position: relative;
         display: grid;
         grid-template-columns: 0.5fr 1fr;
         gap: 15px;
-    }
-    
-    .persona>img {
-        margin-top: 25px;
-        max-width: 500px;
-        width: 80%;
-        position: relative;
     }
 
     .dni {
@@ -274,7 +269,7 @@ body {
 
 
 /* Desktop Styles */
-@media (min-width: 1024px) {
+@media (min-width: 1400px) {
     body {
         height: 100vh;
     }
