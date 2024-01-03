@@ -106,7 +106,7 @@ body {
 }
 
 /* Mobile Styles */
-@media (max-width: 767px) {
+@media (max-width: 1023px) {
     .persona {
         display: flex;
         justify-content: center;
@@ -115,8 +115,7 @@ body {
 
     .persona>img {
         max-width: 500px;
-        width: 100%;
-        /* Adjust the width as needed for smaller screens */
+        width: 80%;
         position: relative;
     }
 
@@ -132,11 +131,6 @@ body {
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
-    }
-
-    .persona>img {
-        position: relative;
-        width: 100%;
     }
 
     .dni {
@@ -201,20 +195,9 @@ body {
 }
 
 /* Tablet Styles */
-@media (min-width: 768px) and (max-width: 1023px) {
+/* @media (min-width: 768px) and (max-width: 1023px) {
 
-    /* Add tablet-specific styles here */
-    .persona {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .persona>img {
-        max-width: 500px;
-    }
-
-}
+} */
 
 
 /* Desktop Styles */
